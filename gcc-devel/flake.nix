@@ -16,8 +16,9 @@
         name = "gcc-devel";
         packages = with pkgs; [
           cmake
-          libgcc
           gef
+          libgcc
+          gdb
         ];
       };
     };
