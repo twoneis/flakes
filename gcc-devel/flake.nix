@@ -15,8 +15,10 @@
       devShell = pkgs.mkShell rec {
         name = "gcc-devel";
         packages = with pkgs; [
+          cmake
           libgcc
           gdb
+          gef
         ];
       };
     };
