@@ -17,7 +17,6 @@
         packages = with pkgs; [
           cmake
           libgcc
-          gdb
           gef
         ];
       };
