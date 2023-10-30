@@ -3,20 +3,16 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-
-    utils = {
-      url = "github:numtide/flake-utils";
-    };
   };
 
-  outputs = { self, nixpkgs, utils, ... }:
+  outputs = { self, nixpkgs, ... }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system;
       };
     in {
-      devShell = pkgs.mkShell rec {
+      devShell.x86_64-linux = pkgs.mkShell rec {
         name = "gcc-devel";
         packages = with pkgs; [
           cmake
