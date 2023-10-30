@@ -20,7 +20,7 @@
           gdb
           gef
         ];
-        shellHook = ''export PS1="[${whoami}@gcc-project]"'';
+        shellHook = ''export PS1="[\u.gcc@\W]"'';
       };
     };
 }
