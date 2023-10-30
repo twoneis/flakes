@@ -2,10 +2,10 @@
   description = "A very basic flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-21.05"
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-21.05";
   };
 
-  outputs = { self, nixpkgs }: {
+  outputs = { self, nixpkgs }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -21,5 +21,4 @@
         ];
       };
     };
-  };
 }
