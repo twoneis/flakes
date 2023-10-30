@@ -2,7 +2,7 @@
   description = "A very basic flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-21.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
   };
 
   outputs = { self, nixpkgs }:
@@ -16,9 +16,9 @@
         name = "gcc-devel";
         packages = with pkgs; [
           cmake
-          gef
           libgcc
           gdb
+          gef
         ];
       };
     };
