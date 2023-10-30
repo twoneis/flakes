@@ -17,7 +17,6 @@
         packages = with pkgs; [
           libgcc
           gdb
-          gef
         ];
       };
     };
