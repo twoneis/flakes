@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-21.05"
-  }
+  };
 
   outputs = { self, nixpkgs }: {
     let
@@ -11,15 +11,15 @@
       pkgs = import nixpkgs {
         inherit system;
       };
-    in  {
-      devShell = pkgs.mkShell rec (
+    in {
+      devShell = pkgs.mkShell rec {
         name = "gcc-devel";
         packages = with pkgs; [
           libgcc
           gdb
           gef
         ];
-      )
+      };
     };
   };
 }
