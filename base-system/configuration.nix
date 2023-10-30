@@ -136,6 +136,8 @@
     alacritty
     git
     gh
+    man-pages
+    man-pages-posix
     xorg.xeyes
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
