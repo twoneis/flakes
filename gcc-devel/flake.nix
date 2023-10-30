@@ -1,5 +1,5 @@
 {
-  description = "A very basic flake";
+  description = "A template flake for development with gcc";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -20,6 +20,7 @@
           gdb
           gef
         ];
+        shellHook = ''export PS1="[${whoami}@gcc-project]"''
       };
     };
 }
