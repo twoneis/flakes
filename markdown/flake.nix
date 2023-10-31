@@ -1,5 +1,5 @@
 {
-  description = "A template flake for development with gcc";
+  description = "A template flake for editing markdown files (helix on system required)";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
