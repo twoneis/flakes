@@ -17,7 +17,7 @@
         packages = with pkgs; [
           marksman
         ];
-        shellHook = ''export PS1="[\u@gcc-devel:\W]\$ "'';
+        shellHook = ''export PS1="[\u@markdown:\W]\$ "'';
       };
     };
 }
