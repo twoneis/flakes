@@ -17,15 +17,14 @@
     };
   in
   {
-    nixosConfigurations = {
-      nixdesktop = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit system; };
+    nixosConfigurations.nixdesktop = nixpkgs.lib.nixosSystem {
+      specialArgs = { inherit system; };
 
-        modules = [ 
-          ./desktop-config.nix 
-        ];
-      };
-      nixsurface = nixpkgs.lib.nixosSystem {
+      modules = [ 
+        ./desktop-config.nix 
+      ];
+    };
+    nixConfigurations.nixsurface = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit system; };
 
         modules = [
