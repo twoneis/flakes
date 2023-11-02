@@ -5,13 +5,22 @@
   home.username = "twoneis";
   home.homeDirectory = "/home/twoneis";
 
-  # Enable home manager (with self config)
-  programs.home-manager.enable = true;
+  programs = {
+    home-manager = {
+      enable = true;
+    };
 
-  programs.git = {
-    enable = true;
-    userName = "twoneis";
-    userEmail = "sanjay29@sapura.de";
+    git = {
+      enable = true;
+      userName = "twoneis";
+      userEmail = "sanjay29@sapura.de";
+    };
+
+    helix = {
+      enable = true;
+      defaultEditor = true;
+      settings = import ./dotfiles/helix/config.toml
+    }
   };
 
   home.stateVersion = "18.09";
