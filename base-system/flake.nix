@@ -31,7 +31,7 @@
         modules = [
           ./surface-config.nix
         ];
-      }
+      };
     };
   };
 }
