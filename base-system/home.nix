@@ -13,4 +13,6 @@
     userName = "twoneis";
     userEmail = "sanjay29@sapura.de";
   };
+
+  home.stateVersion = "18.09";
 }
