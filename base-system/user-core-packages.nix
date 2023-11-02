@@ -1,4 +1,4 @@
-pkgs: with pkgs: [
+pkgs: with pkgs; [
   gnomeExtensions.paperwm
   thunderbird
   helix
@@ -6,4 +6,4 @@ pkgs: with pkgs: [
   discord
   signal-desktop
   spotify
-];
+]

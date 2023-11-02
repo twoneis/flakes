@@ -1,4 +1,4 @@
-pkgs: with pkgs: [
+pkgs: with pkgs; [
   alacritty
   git
   man-pages
@@ -7,4 +7,4 @@ pkgs: with pkgs: [
   gnome.nautilus
   vlc
   image-roll
-];
+]
