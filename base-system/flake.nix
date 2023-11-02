@@ -25,12 +25,11 @@
       ];
     };
     nixConfigurations.nixsurface = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit system; };
+      specialArgs = { inherit system; };
 
-        modules = [
-          ./surface-config.nix
-        ];
-      };
+      modules = [
+        ./surface-config.nix
+      ];
     };
   };
 }
