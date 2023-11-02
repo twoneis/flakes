@@ -80,11 +80,11 @@
     "hint" = iris;
     "debug" = rose;
 
-    "diagnostic" = { underline = { color = subtle; style = curl; }; };
-    "diagnostic.hint" = { underline = { color = iris; style = curl; }; };
-    "diagnostic.info" = { underline = { color = foam; style = curl; }; };
-    "diagnostic.warning" = { underline = { color = gold; style = curl; }; };
-    "diagnostic.error" = { underline = { color = love; style = curl; }; };
+    "diagnostic" = { underline = { color = subtle; style = "curl"; }; };
+    "diagnostic.hint" = { underline = { color = iris; style = "curl"; }; };
+    "diagnostic.info" = { underline = { color = foam; style = "curl"; }; };
+    "diagnostic.warning" = { underline = { color = gold; style = "curl"; }; };
+    "diagnostic.error" = { underline = { color = love; style = "curl"; }; };
     "special" = rose;
 
     "attribute" = "iris";
@@ -144,7 +144,7 @@
 
     "operator" = subtle;
 
-    "function" = rose # maybe pine;
+    "function" = rose; # maybe pine;
     "function.builtin" = love;
     # "function.method" = "";
     # "function.macro" = "";
@@ -170,7 +170,7 @@
     "markup.bold" = { modifiers = ["bold"]; };
     "markup.italic" = { modifiers = ["italic"]; };
     "markup.link" = iris;
-    "markup.link.url" = { fg = iris,  underline = { color = iris, style = "line" }; } ;
+    "markup.link.url" = { fg = iris;  underline = { color = iris; style = "line"; }; } ;
     "markup.link.label" = subtle;
     "markup.link.text" = text;
     "markup.quote" = subtle;
@@ -189,6 +189,5 @@
     "diff.delta" = highlight_high;
     # "diff.delta.moved" = "";
 
-  }
-
+  };
 }
