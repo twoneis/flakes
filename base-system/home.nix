@@ -22,12 +22,13 @@
       settings = import ./dotfiles/helix/config.nix;
       themes = import ./dotfiles/helix/rosepine.nix;
     };
+
+    alacritty = {
+      enable = true;
+      settings = import ./dotfiles/alacritty/alacritty.nix;
+    };
   };
 
-  alacritty = {
-    enable = true;
-    settings = import ./dotfiles/alacritty/alacritty.nix;
-  };
 
   home.stateVersion = "18.09";
 }

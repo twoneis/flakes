@@ -13,8 +13,8 @@
       cursor = "0x524f67";
     };
     line_indicator = {
-      foreground = None;
-      background = None;
+      foreground = "None";
+      background = "None";
     };
     selection = {
       text = "0xe0def4";
@@ -52,5 +52,5 @@
     };
   };
 
-  window.decorations = None;
+  window.decorations = "None";
 }
