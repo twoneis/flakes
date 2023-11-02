@@ -7,7 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+      ./desktop-hardware-config.nix
     ];
 
   # Enable nix flakes
@@ -87,7 +87,7 @@
   };
 
   # Enable CUPS to print documents.
-  services.printing.enable = true;
+  services.printing.enable = false;
 
   # Enable sound with pipewire.
   sound.enable = true;
@@ -114,17 +114,7 @@
     isNormalUser = true;
     description = "twoneis";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      gnome.nautilus
-      firefox
-      thunderbird
-      helix
-      gnomeExtensions.paperwm
-      armcord
-      signal-desktop
-      steam
-      spotify
-    ];
+    packages = import ./user-core-packages.nix pkgs ++ import ./user-game-packages.nix pkgs;
   };
 
   # Allow unfree packages
@@ -132,16 +122,7 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    alacritty
-    git
-    gh
-    man-pages
-    man-pages-posix
-    xorg.xeyes
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
-  ];
+  environment.systemPackages = import ./system-packages.nix pkgs;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

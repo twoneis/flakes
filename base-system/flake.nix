@@ -22,9 +22,16 @@
         specialArgs = { inherit system; };
 
         modules = [ 
-          ./configuration.nix 
+          ./desktop-config.nix 
         ];
       };
+      nixsurface = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit system; };
+
+        modules = [
+          ./surface-config.nix
+        ];
+      }
     };
   };
 }
