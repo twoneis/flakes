@@ -19,7 +19,8 @@
     helix = {
       enable = true;
       defaultEditor = true;
-      settings = import ./dotfiles/helix/config.toml;
+      settings = import ./dotfiles/helix/config.nix;
+      themes = import ./dotfiles/helix/rosepine.nix;
     };
   };
 
