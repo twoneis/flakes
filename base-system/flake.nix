@@ -33,7 +33,7 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.twoneis = import ./home.nix
+          home-manager.users.twoneis = import ./home.nix;
         }
       ];
     };
@@ -46,7 +46,7 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.twoneis = import ./home.nix
+          home-manager.users.twoneis = import ./home.nix;
         }
       ];
     };
