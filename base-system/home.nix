@@ -19,8 +19,8 @@
     helix = {
       enable = true;
       defaultEditor = true;
-      settings = import ./dotfiles/helix/config.toml
-    }
+      settings = import ./dotfiles/helix/config.toml;
+    };
   };
 
   home.stateVersion = "18.09";
