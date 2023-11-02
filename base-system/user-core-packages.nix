@@ -2,10 +2,7 @@ pkgs: with pkgs; [
   gnomeExtensions.paperwm
   thunderbird
   helix
-  (discord-ptb.override {
-    withOpenASAR = true;
-    withVencord = true;
-  })
+  webcord
   signal-desktop
   spotify
 ]
