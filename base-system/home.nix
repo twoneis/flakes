@@ -24,5 +24,10 @@
     };
   };
 
+  alacritty = {
+    enable = true;
+    settings = import ./dotfiles/alacritty/alacritty.nix;
+  };
+
   home.stateVersion = "18.09";
 }
