@@ -7,4 +7,4 @@ pkgs: with pkgs: [
   gnome.nautilus
   vlc
   image-roll
-]
+];
