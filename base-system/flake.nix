@@ -15,16 +15,9 @@
   outputs = {nixpkgs, home-manager, ...}:
   let
     system = "x86_64-linux";
-    pkgs = import nixpkgs {
-      inherit system;
-
-      config = {
-        allowUnfree = true;
-      };
-    };
   in
   {
-    nixosConfigurations.nixdesktop = pkgs.lib.nixosSystem {
+    nixosConfigurations.nixdesktop = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit system; };
 
       modules = [ 
@@ -37,7 +30,7 @@
         }
       ];
     };
-    nixConfigurations.nixsurface = pkgs.lib.nixosSystem {
+    nixConfigurations.nixsurface = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit system; };
 
       modules = [
