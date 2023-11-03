@@ -36,7 +36,7 @@
 
     zsh = {
       enable = true;
-      enabelAutosuggestions = true;
+      enableAutosuggestions = true;
       enableCompletion = true;
       enableVteIntegration = true;
       dotDir = ".config/zsh";
