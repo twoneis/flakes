@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, niri, ... }:
+{ config, pkgs, ... }:
 
 {
   imports =
@@ -12,9 +12,6 @@
 
   # Enable nix flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-  # Add zsh to link path to enable completion for system packages
-  environment.pathsToLink = [ "/share/zsh" ];
 
   # Disable documentation
   documentation.nixos.enable = false;

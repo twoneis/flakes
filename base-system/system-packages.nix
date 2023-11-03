@@ -1,6 +1,5 @@
 pkgs: with pkgs; [
   alacritty
-  zsh
   git
   gh
   man-pages

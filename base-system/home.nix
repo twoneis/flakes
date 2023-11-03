@@ -33,15 +33,6 @@
       enable = true;
       settings = import ./dotfiles/alacritty/alacritty.nix;
     };
-
-    zsh = {
-      enable = true;
-      enableAutosuggestions = true;
-      enableCompletion = true;
-      enableVteIntegration = true;
-      dotDir = ".config/zsh";
-      history.ignoreDups = true;
-    };
   };
 
 
