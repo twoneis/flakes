@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./surface-hardware-config.nix
+      ./env.nix
     ];
 
   # Enable nix flakes
@@ -105,7 +106,7 @@
     isNormalUser = true;
     description = "twoneis";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = import ./user-core-packages.nix pkgs;
+    packages = import ./packages/user-core-packages.nix pkgs;
   };
 
   # Allow unfree packages
@@ -113,7 +114,7 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = import ./system-packages.nix pkgs;
+  environment.systemPackages = import ./packages/system-packages.nix pkgs;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

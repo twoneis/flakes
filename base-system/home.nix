@@ -5,12 +5,6 @@
   home.username = "twoneis";
   home.homeDirectory = "/home/twoneis";
 
-  systemd.user.sessionVariables = {
-    EDITOR = "hx";
-    SUDO_EDITOR = "hx";
-    VISUAL = "hx";
-  };
-
   programs = {
     home-manager = {
       enable = true;
