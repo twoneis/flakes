@@ -7,4 +7,5 @@ pkgs: with pkgs; [
   webcord
   signal-desktop
   spotify
+  krita
 ]
