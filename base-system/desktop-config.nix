@@ -13,6 +13,9 @@
   # Enable nix flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  # Add zsh to link path to enable completion for system packages
+  environment.pathsToLink = [ "/share/zsh" ];
+
   # Disable documentation
   documentation.nixos.enable = false;
 

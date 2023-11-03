@@ -5,6 +5,12 @@
   home.username = "twoneis";
   home.homeDirectory = "/home/twoneis";
 
+  systemd.user.sessionVariables = {
+    EDITOR = "hx";
+    SUDO_EDITOR = "hx";
+    VISUAL = "hx";
+  };
+
   programs = {
     home-manager = {
       enable = true;
@@ -26,6 +32,15 @@
     alacritty = {
       enable = true;
       settings = import ./dotfiles/alacritty/alacritty.nix;
+    };
+
+    zsh = {
+      enable = true;
+      enabelAutosuggestions = true;
+      enableCompletion = true;
+      enableVteIntegration = true;
+      dotDir = ".config/zsh";
+      history.ignoreDups = true;
     };
   };
 
