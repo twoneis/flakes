@@ -8,4 +8,5 @@ pkgs: with pkgs; [
   signal-desktop
   spotify
   krita
+  anki
 ]
