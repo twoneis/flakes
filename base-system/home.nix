@@ -5,14 +5,17 @@
   home.username = "twoneis";
   home.homeDirectory = "/home/twoneis";
 
-  home.shellAliases = {
-    "up" = "nix flake update /home/twoneis/.flakes/base-system &&
-            sudo nixos-rebuild switch --flake /home/twoneis/.flakes/base-system";
-  };
-
   programs = {
     home-manager = {
       enable = true;
+    };
+
+    bash = {
+      shellAliases = {
+        up = "nix flake update /home/twoneis/.flakes/base-system &&
+              sudo nixos-rebuild switch --flake /home/twoneis/.flakes/base-system";
+        ll = "ls -al";
+      };
     };
 
     git = {
