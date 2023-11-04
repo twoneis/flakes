@@ -9,6 +9,7 @@ pkgs: with pkgs; [
   marksman
   # Render markdown files
   pandoc
+  texlive.combined.scheme-full
   # Regular apps
   webcord
   thunderbird
