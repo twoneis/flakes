@@ -7,6 +7,8 @@ pkgs: with pkgs; [
   helix
   nil
   marksman
+  # Render markdown files
+  pandoc
   # Regular apps
   webcord
   thunderbird
