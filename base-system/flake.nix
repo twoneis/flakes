@@ -30,7 +30,7 @@
         }
       ];
     };
-    nixConfigurations.nixsurface = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.nixsurface = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit system; };
 
       modules = [
