@@ -8,6 +8,7 @@ pkgs: with pkgs; [
   nil
   marksman
   # Render markdown files
+  glow
   pandoc
   texlive.combined.scheme-full
   # Regular apps
