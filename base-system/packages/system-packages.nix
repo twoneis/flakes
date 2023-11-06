@@ -8,6 +8,4 @@ pkgs: with pkgs; [
   gnome.nautilus
   vlc
   image-roll
-] ++ [
-  (import ./niri/default.nix)
 ]
