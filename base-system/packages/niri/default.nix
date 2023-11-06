@@ -18,14 +18,14 @@ rustPlatform.buildRustPackage rec {
     };
   };
 
-  LIBCLANG_PATH = "${pkgs.clang.cc.lib}/lib";
+  LIBCLANG_PATH = "${libclang.lib}/lib";
   BINDGEN_EXTRA_CLANG_ARGS = [
     ''-I"${libclang.lib}/lib/clang/${libclang.version}/include"''
     "-I ${glibc.dev}/include"
   ];
 
   nativeBuildInputs = [ makeBinaryWrapper pkg-config libclang ];
-  buildInputs = [ libglvnd libinput libxkbcommon mesa seatd udev wayland libclang pipewire ];
+  buildInputs = [ libglvnd libinput libxkbcommon mesa seatd udev wayland pipewire ];
 
   RUSTFLAGS = map (a: "-C link-arg=${a}") [
     "-Wl,--push-state,--no-as-needed"
