@@ -1,4 +1,4 @@
-{ pkgs, rustPlatform, fetchFromGitHub, makeBinaryWrapper, pkg-config, libclang, libglvnd, libinput, libxkbcommon, mesa, seatd, udev, wayland, pipewire}:
+with import <nixpkgs> {};
 
 rustPlatform.buildRustPackage rec {
   pname = "niri";
@@ -18,10 +18,10 @@ rustPlatform.buildRustPackage rec {
     };
   };
 
-  LIBCLANG_PATH = "${pkgs.libclang.lib}/lib";
+  LIBCLANG_PATH = "${libclang.lib}/lib";
   BINDGEN_EXTRA_CLANG_ARGS = [
-    ''-I"${pkgs.libclang.lib}/lib/clang/${pkgs.libclang.version}/include"''
-    "-I ${pkgs.glibc.dev}/include"
+    ''-I"${libclang.lib}/lib/clang/${libclang.version}/include"''
+    "-I ${glibc.dev}/include"
   ];
 
   nativeBuildInputs = [ makeBinaryWrapper pkg-config libclang ];
