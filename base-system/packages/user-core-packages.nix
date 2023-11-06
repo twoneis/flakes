@@ -12,7 +12,7 @@ pkgs: with pkgs; [
   pandoc
   texlive.combined.scheme-full
   # Regular apps
-  webcord
+  armcord
   thunderbird
   signal-desktop
   spotify
