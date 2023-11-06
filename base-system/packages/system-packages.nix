@@ -1,5 +1,4 @@
 pkgs: with pkgs; [
-  pkg-config
   alacritty
   git
   gh
