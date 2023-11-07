@@ -2,8 +2,16 @@
 
 {
   # Set username and home directory
-  home.username = "twoneis";
-  home.homeDirectory = "/home/twoneis";
+  home = {
+    username = "twoneis";
+    homeDirectory = "/home/twoneis";
+
+    file = {
+      ".gef.rc" = {
+        source = "./dotfiles/gdb/.gef.rc";
+      };
+    };
+  };
 
   programs = {
     home-manager = {
