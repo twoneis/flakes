@@ -15,6 +15,7 @@ pkgs: with pkgs; [
   armcord
   thunderbird
   signal-desktop
-  spotify
+  spotifyd
+  calibre
   krita
 ]
