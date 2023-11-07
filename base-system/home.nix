@@ -8,7 +8,7 @@
 
     file = {
       ".gef.rc" = {
-        source = "./dotfiles/gdb/.gef.rc";
+        source = ./dotfiles/gdb/.gef.rc;
       };
     };
   };
