@@ -35,7 +35,9 @@
       enable = true;
       settings = import ./dotfiles/alacritty/alacritty.nix;
     };
+  };
 
+  services = {
     spotifyd = {
       enable = true;
       settings = import ./dotfiles/spotifyd/spotifyd.nix;
