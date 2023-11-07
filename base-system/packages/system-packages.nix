@@ -4,6 +4,7 @@ pkgs: with pkgs; [
   gh
   man-pages
   man-pages-posix
+  bottom
   firefox
   gnome.nautilus
   vlc
