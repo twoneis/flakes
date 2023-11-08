@@ -50,13 +50,5 @@
     };
   };
 
-  services = {
-    spotifyd = {
-      enable = true;
-      settings = import ./dotfiles/spotifyd/spotifyd.nix;
-    };
-  };
-
-
   home.stateVersion = "18.09";
 }
