@@ -48,11 +48,6 @@
       enable = true;
       settings = import ./dotfiles/alacritty/alacritty.nix;
     };
-
-    firefox = {
-      enable = true;
-      package = pkgs.librewolf;
-    };
   };
 
   services = {
