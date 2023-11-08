@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   # Set username and home directory
@@ -8,7 +8,12 @@
 
     file = {
       ".gef.rc" = {
-        source = ./dotfiles/gdb/.gef.rc;
+        source = ./dotfiles/gdb/gef-for-c;
+        # source = ./dotfiles/gdb/gef-for-asm
+      };
+      ".gdbinit" = {
+        source = ./dotfiles/gdb/gdb-for-c;
+        # source = ./dotfiles/gdb/gdb-for-asm;
       };
     };
   };
@@ -42,6 +47,11 @@
     alacritty = {
       enable = true;
       settings = import ./dotfiles/alacritty/alacritty.nix;
+    };
+
+    firefox = {
+      enable = true;
+      package = pkgs.librewolf;
     };
   };
 
