@@ -12,10 +12,6 @@ pkgs: with pkgs; [
   pandoc
   texlive.combined.scheme-full
   # Regular apps
-  (discord.override {
-    withOpenASAR = true;
-    withVencord = true;
-  })
   thunderbird
   signal-desktop
   spotify

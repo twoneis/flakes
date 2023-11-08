@@ -48,6 +48,11 @@
       enable = true;
       settings = import ./dotfiles/alacritty/alacritty.nix;
     };
+
+    discocss = {
+      enable = true;
+      css = import ./dotfiles/discord/rosepine.css;
+    };
   };
 
   home.stateVersion = "18.09";
