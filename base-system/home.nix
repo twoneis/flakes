@@ -16,19 +16,17 @@
         # source = ./dotfiles/gdb/gdb-for-asm;
       };
     };
+
+    shellAliases = {
+      up = "nix flake update /home/twoneis/.flakes/base-system &&
+            sudo nixos-rebuild switch --flake /home/twoneis/.flakes/base-system";
+      ll = "ls -al";
+    };
   };
 
   programs = {
     home-manager = {
       enable = true;
-    };
-
-    bash = {
-      shellAliases = {
-        up = "nix flake update /home/twoneis/.flakes/base-system &&
-              sudo nixos-rebuild switch --flake /home/twoneis/.flakes/base-system";
-        ll = "ls -al";
-      };
     };
 
     git = {
