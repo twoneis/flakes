@@ -43,7 +43,6 @@
 
     discocss = {
       enable = true;
-      css = import ./dotfiles/discord/rosepine.css;
     };
   };
 
