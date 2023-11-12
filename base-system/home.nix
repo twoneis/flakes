@@ -40,10 +40,6 @@
       enable = true;
       settings = import ./dotfiles/alacritty/alacritty.nix;
     };
-
-    discocss = {
-      enable = true;
-    };
   };
 
   home.stateVersion = "18.09";

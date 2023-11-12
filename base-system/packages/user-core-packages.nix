@@ -14,6 +14,7 @@ pkgs: with pkgs; [
   # Regular apps
   thunderbird
   signal-desktop
+  discord
   spotify
   calibre
   krita
