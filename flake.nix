@@ -1,7 +1,7 @@
 {
   description = "My collection of flake templates";
 
-  outputs = { }: {
+  outputs = { self }: {
     trivial = {
       path = ./trivial;
       description = "The default flake template most non-specialised flakes should be based on";
