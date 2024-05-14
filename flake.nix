@@ -11,5 +11,10 @@
       path = ./fhs;
       description = "A simple flake but creating an fhs compliant environment";
     };
+
+    rust = {
+      path = ./rust;
+      description = "A simple flake with an overlay for rust";
+    };
   };
 }
