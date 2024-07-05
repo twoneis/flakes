@@ -11,10 +11,11 @@
         inherit system;
       };
       fhs = pkgs.buildFHSUserEnv {
+        name = "";
         targetPkgs = pkgs: [ ];
 
         runScript = ''
-          zsh
+          fish
         '';
       };
     in {
