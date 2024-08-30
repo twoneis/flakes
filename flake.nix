@@ -19,12 +19,17 @@
 
     c = {
       path = ./c;
-      description = "Flake for c or cpp development";
+      description = "Flake for coding in C with zig cc as compiler";
     };
 
     typst = {
       path = ./typst;
       description = "A flake for automatically compiling typst files";
+    };
+
+    zig = {
+      path = ./zig;
+      description = "Flake for zig development";
     };
   };
 }
