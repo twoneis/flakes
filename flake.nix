@@ -22,6 +22,11 @@
       description = "Flake for coding in C with zig cc as compiler";
     };
 
+    python = {
+      path = ./python;
+      description = "Template flake for a python environment";
+    };
+
     typst = {
       path = ./typst;
       description = "A flake for automatically compiling typst files";
